@@ -1,0 +1,761 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 85px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0b0b0d;
+    color: white;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 1150px;
+    margin: auto;
+}
+
+/* BARRA SUPERIOR */
+
+.barra-top {
+    background: #df1e2d;
+    text-align: center;
+    padding: 8px;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+/* MENÚ */
+
+.header {
+    height: 76px;
+    background: #111;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    border-bottom: 1px solid #333;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 22px;
+    font-weight: 900;
+}
+
+.logo-icon {
+    background: #e21b2d;
+    padding: 4px 12px;
+    font-size: 27px;
+}
+
+.logo small {
+    display: block;
+    font-size: 7px;
+    letter-spacing: 2px;
+    color: #aaa;
+}
+
+.header nav {
+    display: flex;
+    gap: 28px;
+}
+
+.header nav a {
+    font-size: 11px;
+    font-weight: bold;
+    color: #ccc;
+}
+
+.header nav a:hover {
+    color: #e21b2d;
+}
+
+.tema-btn,
+.menu-btn {
+    background: transparent;
+    border: 1px solid #555;
+    color: white;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.menu-btn {
+    display: none;
+}
+
+/* PORTADA */
+
+.hero {
+    min-height: 590px;
+    display: flex;
+    align-items: center;
+
+    background:
+        linear-gradient(90deg, #080809 5%, #080809dd 50%, #08080922),
+        url("https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1800&q=90");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-contenido {
+    width: 90%;
+    max-width: 1150px;
+    margin: auto;
+}
+
+.etiqueta {
+    font-size: 10px;
+    letter-spacing: 3px;
+    font-weight: bold;
+    margin-bottom: 18px;
+    color: #ddd;
+}
+
+.rojo {
+    color: #e21b2d;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 6vw, 76px);
+    line-height: 1.05;
+    font-weight: 900;
+}
+
+.hero h1 span {
+    color: #e21b2d;
+}
+
+.hero-texto {
+    max-width: 480px;
+    color: #bbb;
+    font-size: 13px;
+    margin: 23px 0;
+}
+
+/* BOTONES */
+
+.btn-rojo,
+.btn-borde {
+    display: inline-block;
+    padding: 13px 20px;
+    margin: 5px 7px 5px 0;
+    font-size: 11px;
+    font-weight: bold;
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+
+.btn-rojo {
+    background: #e21b2d;
+    color: white;
+}
+
+.btn-rojo:hover {
+    background: #b90f1d;
+}
+
+.btn-borde {
+    border-color: #888;
+    color: white;
+}
+
+/* ESTADÍSTICAS */
+
+.estadisticas {
+    width: 90%;
+    max-width: 1150px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+    padding: 30px 0;
+    border-bottom: 1px solid #333;
+}
+
+.estadisticas div {
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid #333;
+}
+
+.estadisticas div:last-child {
+    border: none;
+}
+
+.estadisticas strong {
+    font-size: 30px;
+    color: #e21b2d;
+}
+
+.estadisticas span {
+    font-size: 10px;
+    color: #aaa;
+}
+
+/* SECCIÓN VEHÍCULOS */
+
+.seccion {
+    padding-top: 85px;
+    padding-bottom: 85px;
+}
+
+.titulo-seccion h2,
+.marcas h2,
+.contacto h2 {
+    font-size: clamp(32px, 4vw, 48px);
+    line-height: 1.1;
+}
+
+.titulo-seccion h2 span,
+.marcas h2 span,
+.contacto h2 span {
+    color: #e21b2d;
+}
+
+.titulo-seccion > p:last-child {
+    font-size: 12px;
+    color: #aaa;
+    margin-top: 10px;
+}
+
+.filtros {
+    display: flex;
+    gap: 12px;
+    margin: 28px 0 15px;
+}
+
+.filtros input,
+.filtros select {
+    flex: 1;
+    min-width: 0;
+    padding: 13px;
+    background: #17171a;
+    color: white;
+    border: 1px solid #38383d;
+}
+
+#cantidad {
+    font-size: 10px;
+    color: #aaa;
+    margin-bottom: 18px;
+}
+
+/* TARJETAS */
+
+.vehiculos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.vehiculo {
+    background: #17171a;
+    border: 1px solid #303035;
+    overflow: hidden;
+    transition: .3s;
+}
+
+.vehiculo:hover {
+    transform: translateY(-5px);
+    border-color: #e21b2d;
+}
+
+.foto-auto {
+    height: 190px;
+    position: relative;
+    overflow: hidden;
+}
+
+.foto-auto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .4s;
+}
+
+.vehiculo:hover img {
+    transform: scale(1.06);
+}
+
+.etiqueta-auto {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    z-index: 1;
+    background: #e21b2d;
+    padding: 5px 9px;
+    font-size: 8px;
+    font-weight: bold;
+}
+
+.info-auto {
+    padding: 18px;
+}
+
+.info-auto small {
+    color: #e21b2d;
+    font-size: 9px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.info-auto h3 {
+    font-size: 23px;
+    margin: 5px 0;
+}
+
+.info-auto p {
+    font-size: 11px;
+    color: #aaa;
+    min-height: 36px;
+}
+
+.precio {
+    border-top: 1px solid #333;
+    margin-top: 15px;
+    padding-top: 13px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+}
+
+.precio b {
+    font-size: 10px;
+}
+
+.ver-detalles {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #e21b2d;
+    color: white;
+    cursor: pointer;
+    font-size: 10px;
+    padding: 5px;
+    font-weight: bold;
+}
+
+.nota {
+    color: #999;
+    font-size: 9px;
+    margin-top: 15px;
+}
+
+#sinResultados {
+    padding: 25px;
+    color: #ccc;
+    text-align: center;
+}
+
+/* MARCAS */
+
+.marcas {
+    background: #17171a;
+    text-align: center;
+    padding: 75px 0;
+}
+
+.lista-marcas {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 40px 0;
+}
+
+.lista-marcas b {
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+.marcas a {
+    font-size: 11px;
+    border-bottom: 1px solid #e21b2d;
+    padding-bottom: 5px;
+}
+
+/* PROMOCIÓN */
+
+.promocion {
+    padding-top: 85px;
+    padding-bottom: 85px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 45px;
+    align-items: center;
+}
+
+.promocion h2 {
+    font-size: clamp(36px, 4vw, 52px);
+    line-height: 1.1;
+}
+
+.promocion > div:first-child > p:not(.etiqueta) {
+    font-size: 12px;
+    color: #aaa;
+    margin: 18px 0;
+}
+
+.contador-caja {
+    background: #1a1a1e;
+    border: 1px solid #38383d;
+    padding: 32px;
+}
+
+.contador-caja > small {
+    color: #e21b2d;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.contador-caja h3 {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.contador-caja p {
+    font-size: 11px;
+    color: #aaa;
+}
+
+.reloj {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 9px;
+    margin: 25px 0;
+}
+
+.reloj div {
+    background: #0b0b0d;
+    text-align: center;
+    padding: 14px 4px;
+    display: flex;
+    flex-direction: column;
+}
+
+.reloj strong {
+    font-size: 27px;
+}
+
+.reloj span {
+    font-size: 8px;
+    color: #aaa;
+}
+
+/* CONTACTO */
+
+.contacto {
+    background: #17171a;
+    padding: 80px 0;
+}
+
+.contacto-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+}
+
+.contacto-grid > div > p:not(.etiqueta) {
+    font-size: 12px;
+    color: #aaa;
+    margin-top: 18px;
+}
+
+.datos-contacto a {
+    color: #e21b2d;
+}
+
+form {
+    background: #0d0d0f;
+    border: 1px solid #333;
+    padding: 26px;
+    display: grid;
+    gap: 12px;
+}
+
+form label {
+    font-size: 10px;
+    font-weight: bold;
+    color: #ccc;
+}
+
+form input,
+form select,
+form textarea {
+    background: #19191d;
+    border: 1px solid #444;
+    padding: 12px;
+    color: white;
+    width: 100%;
+    font-family: Arial, sans-serif;
+}
+
+form textarea {
+    resize: vertical;
+}
+
+form button {
+    width: 100%;
+}
+
+#mensaje {
+    font-size: 11px;
+    min-height: 18px;
+}
+
+/* PIE DE PÁGINA */
+
+footer {
+    background: #080809;
+    padding: 25px 0;
+}
+
+.pie {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    font-size: 10px;
+    color: #aaa;
+}
+
+/* MODAL */
+
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: #000c;
+    z-index: 30;
+    place-items: center;
+    padding: 20px;
+}
+
+.modal-contenido {
+    background: #19191d;
+    border: 1px solid #555;
+    padding: 35px;
+    max-width: 460px;
+    position: relative;
+}
+
+.modal-contenido h2 {
+    font-size: 30px;
+}
+
+.modal-contenido p {
+    font-size: 12px;
+    color: #bbb;
+    margin: 12px 0;
+}
+
+.cerrar {
+    position: absolute;
+    right: 13px;
+    top: 7px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 27px;
+    cursor: pointer;
+}
+
+/* MODO CLARO */
+
+body.claro {
+    background: #f4f4f5;
+    color: #171719;
+}
+
+body.claro .header,
+body.claro .marcas,
+body.claro .contacto {
+    background: #e7e7e9;
+}
+
+body.claro .header nav a,
+body.claro .tema-btn {
+    color: #222;
+}
+
+body.claro .vehiculo,
+body.claro .contador-caja {
+    background: white;
+    color: #171719;
+}
+
+body.claro .vehiculo p {
+    color: #555;
+}
+
+body.claro form {
+    background: white;
+}
+
+body.claro form input,
+body.claro form select,
+body.claro form textarea {
+    background: #f4f4f5;
+    color: #222;
+}
+
+/* DISEÑO PARA CELULARES */
+
+@media (max-width: 800px) {
+    .vehiculos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .header nav {
+        gap: 13px;
+    }
+}
+
+@media (max-width: 620px) {
+
+    .header {
+        height: 66px;
+    }
+
+    .menu-btn {
+        display: block;
+        margin-left: auto;
+        margin-right: 10px;
+    }
+
+    .header nav {
+        display: none;
+        position: absolute;
+        top: 66px;
+        left: 0;
+        right: 0;
+        background: #17171a;
+        padding: 20px;
+        flex-direction: column;
+    }
+
+    .filtros {
+        flex-direction: column;
+    }
+
+    .vehiculos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .promocion,
+    .contacto-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .lista-marcas {
+        justify-content: center;
+    }
+
+    .pie {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .seccion {
+        padding: 60px 0;
+    }
+}
+.marcas {
+    background: #090a0d;
+    padding: 90px 5%;
+    text-align: center;
+}
+
+.contenedor-marcas .etiqueta {
+    color: #e21b2d;
+    font-weight: bold;
+    letter-spacing: 4px;
+    font-size: 13px;
+}
+
+.contenedor-marcas h2 {
+    color: white;
+    font-size: 42px;
+    margin: 20px 0 55px;
+}
+
+.contenedor-marcas h2 span {
+    color: #e21b2d;
+}
+
+.logos-marcas {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 35px;
+    align-items: center;
+    margin-bottom: 45px;
+}
+
+.logo-marca {
+    padding: 20px 10px;
+    transition: 0.3s;
+}
+
+.logo-marca img {
+    width: 75px;
+    height: 65px;
+    object-fit: contain;
+    margin: auto;
+}
+
+.logo-marca p {
+    color: white;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.logo-marca:hover {
+    transform: translateY(-8px);
+}
+
+.logo-marca:hover img {
+    filter: brightness(0) saturate(100%)
+            invert(23%) sepia(95%) saturate(5000%)
+            hue-rotate(340deg);
+}
+
+.contenedor-marcas > a {
+    color: white;
+    text-decoration: none;
+    border-bottom: 2px solid #e21b2d;
+    padding-bottom: 8px;
+}
+
+@media (max-width: 700px) {
+    .logos-marcas {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .contenedor-marcas h2 {
+        font-size: 30px;
+    }
+}

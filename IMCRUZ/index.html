@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMCRUZ | Venta de vehículos</title>
+
+    <link rel="stylesheet" href="css/estilos.css">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/app.js" defer></script>
+</head>
+
+<body>
+
+    <div class="barra-top">
+        IMCRUZ BOLIVIA | CONTIGO TODO EL CAMINO
+    </div>
+
+    <!-- MENÚ -->
+    <header class="header">
+        <a href="#inicio" class="logo">
+            <span class="logo-icon">I</span>
+            <span>IMCRUZ
+                <small>CONTIGO TODO EL CAMINO</small>
+            </span>
+        </a>
+
+        <button id="menuBtn" class="menu-btn">☰</button>
+
+        <nav id="menu">
+            <a href="#inicio">Inicio</a>
+            <a href="#vehiculos">Vehículos</a>
+            <a href="#marcas">Marcas</a>
+            <a href="#promocion">Promociones</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+
+        <button id="temaBtn" class="tema-btn">☼</button>
+    </header>
+
+    <main>
+
+        <!-- INICIO -->
+        <section class="hero" id="inicio">
+            <div class="hero-contenido">
+                <p class="etiqueta">DESCUBRE TU PRÓXIMA AVENTURA</p>
+
+                <h1>
+                    El camino que<br>
+                    <span>imaginas</span> empieza aquí.
+                </h1>
+
+                <p class="hero-texto">
+                    Encuentra el vehículo ideal para tu estilo de vida.
+                    Explora modelos y descubre nuevas posibilidades.
+                </p>
+
+                <a href="#vehiculos" class="btn-rojo">
+                    Explorar vehículos →
+                </a>
+
+                <a href="#contacto" class="btn-borde">
+                    Solicitar asesoría
+                </a>
+            </div>
+        </section>
+
+        <!-- ESTADÍSTICAS -->
+        <section class="estadisticas">
+            <div>
+                <strong class="contador" data-meta="6">0</strong>
+                <span>Marcas de referencia</span>
+            </div>
+
+            <div>
+                <strong class="contador" data-meta="35">0</strong>
+                <span>Años de experiencia*</span>
+            </div>
+
+            <div>
+                <strong class="contador" data-meta="100">0</strong>
+                <span>Atención al cliente</span>
+            </div>
+        </section>
+
+        <!-- VEHÍCULOS -->
+        <section class="seccion contenedor" id="vehiculos">
+
+            <div class="titulo-seccion">
+                <p class="etiqueta rojo">NUESTRO CATÁLOGO</p>
+                <h2>Encuentra tu <span>vehículo</span></h2>
+                <p>Conoce algunos modelos de vehículos.</p>
+            </div>
+
+            <div class="filtros">
+
+                <input
+                    type="search"
+                    id="buscador"
+                    placeholder="Buscar por marca o modelo..."
+                >
+
+                <select id="filtroMarca">
+                    <option value="todos">Todas las marcas</option>
+                    <option value="Suzuki">Suzuki</option>
+                    <option value="Mazda">Mazda</option>
+                    <option value="Renault">Renault</option>
+                    <option value="JAC">JAC</option>
+                </select>
+
+                <select id="filtroTipo">
+                    <option value="todos">Todos los tipos</option>
+                    <option value="SUV">SUV</option>
+                    <option value="Citycar">Citycar</option>
+                    <option value="Camioneta">Camioneta</option>
+                </select>
+
+            </div>
+
+            <p id="cantidad">6 vehículos disponibles</p>
+
+            <div class="vehiculos-grid" id="listaVehiculos">
+
+                <article class="vehiculo"
+                    data-marca="Suzuki"
+                    data-tipo="Citycar"
+                    data-modelo="Alto">
+
+                    <div class="foto-auto">
+                        <span class="etiqueta-auto">URBANO</span>
+                        <img
+                            src="https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&w=900&q=85"
+                            alt="Automóvil compacto">
+                    </div>
+
+                    <div class="info-auto">
+                        <small>SUZUKI · CITYCAR</small>
+                        <h3>Alto</h3>
+                        <p>Compacto y práctico para movilizarte por la ciudad.</p>
+                        <div class="precio">
+                            <b>Precio a consultar</b>
+                            <button class="ver-detalles">Ver detalles ↗</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="vehiculo"
+                    data-marca="Suzuki"
+                    data-tipo="SUV"
+                    data-modelo="Jimny">
+
+                    <div class="foto-auto">
+                        <span class="etiqueta-auto">AVENTURA</span>
+                        <img
+                            src="https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?auto=format&fit=crop&w=900&q=85"
+                            alt="Vehículo todoterreno">
+                    </div>
+
+                    <div class="info-auto">
+                        <small>SUZUKI · SUV</small>
+                        <h3>Jimny</h3>
+                        <p>Ideal para quienes disfrutan de la aventura.</p>
+                        <div class="precio">
+                            <b>Precio a consultar</b>
+                            <button class="ver-detalles">Ver detalles ↗</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="vehiculo"
+                    data-marca="Suzuki"
+                    data-tipo="SUV"
+                    data-modelo="Grand Vitara">
+
+                    <div class="foto-auto">
+                        <span class="etiqueta-auto">FAMILIAR</span>
+                        <img
+                            src="https://images.unsplash.com/photo-1507136566006-cfc505b114fc?auto=format&fit=crop&w=900&q=85"
+                            alt="Vehículo familiar">
+                    </div>
+
+                    <div class="info-auto">
+                        <small>SUZUKI · SUV</small>
+                        <h3>Grand Vitara</h3>
+                        <p>Espacio y comodidad para compartir cada recorrido.</p>
+                        <div class="precio">
+                            <b>Precio a consultar</b>
+                            <button class="ver-detalles">Ver detalles ↗</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="vehiculo"
+                    data-marca="Mazda"
+                    data-tipo="SUV"
+                    data-modelo="CX-5">
+
+                    <div class="foto-auto">
+                        <span class="etiqueta-auto">DISEÑO</span>
+                        <img
+                            src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?auto=format&fit=crop&w=900&q=85"
+                            alt="Automóvil moderno">
+                    </div>
+
+                    <div class="info-auto">
+                        <small>MAZDA · SUV</small>
+                        <h3>CX-5</h3>
+                        <p>Diseño moderno y conducción confortable.</p>
+                        <div class="precio">
+                            <b>Precio a consultar</b>
+                            <button class="ver-detalles">Ver detalles ↗</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="vehiculo"
+                    data-marca="Renault"
+                    data-tipo="SUV"
+                    data-modelo="Kardian">
+
+                    <div class="foto-auto">
+                        <span class="etiqueta-auto">VERSÁTIL</span>
+                        <img
+                            src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=900&q=85"
+                            alt="Vehículo deportivo">
+                    </div>
+
+                    <div class="info-auto">
+                        <small>RENAULT · SUV</small>
+                        <h3>Kardian</h3>
+                        <p>Una opción versátil con estilo urbano.</p>
+                        <div class="precio">
+                            <b>Precio a consultar</b>
+                            <button class="ver-detalles">Ver detalles ↗</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="vehiculo"
+                    data-marca="JAC"
+                    data-tipo="Camioneta"
+                    data-modelo="T8 Pro">
+
+                    <div class="foto-auto">
+                        <span class="etiqueta-auto">POTENCIA</span>
+                        <img
+                            src="https://images.unsplash.com/photo-1559416523-140ddc3d238c?auto=format&fit=crop&w=900&q=85"
+                            alt="Camioneta pickup">
+                    </div>
+
+                    <div class="info-auto">
+                        <small>JAC · CAMIONETA</small>
+                        <h3>T8 Pro</h3>
+                        <p>Una camioneta para el trabajo y la aventura.</p>
+                        <div class="precio">
+                            <b>Precio a consultar</b>
+                            <button class="ver-detalles">Ver detalles ↗</button>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+
+            <p id="sinResultados" hidden>
+                No encontramos vehículos con esos filtros.
+            </p>
+
+            <p class="nota">
+                Fotografías ilustrativas. Los modelos, versiones, precios y disponibilidad
+                deben confirmarse directamente con Imcruz.
+            </p>
+        </section>
+
+        <!-- MARCAS -->
+        <section class="marcas" id="marcas">
+    <div class="contenedor-marcas">
+
+        <span class="etiqueta">NUESTRAS MARCAS</span>
+
+        <h2>Grandes marcas,<br>
+            <span>un solo lugar.</span>
+        </h2>
+
+        <div class="logos-marcas">
+
+            <div class="logo-marca">
+                <img src="https://cdn.simpleicons.org/suzuki/FFFFFF"
+                     alt="Suzuki">
+                <p>SUZUKI</p>
+            </div>
+
+            <div class="logo-marca">
+                <img src="https://cdn.simpleicons.org/mazda/FFFFFF"
+                     alt="Mazda">
+                <p>MAZDA</p>
+            </div>
+
+            <div class="logo-marca">
+                <img src="https://cdn.simpleicons.org/subaru/FFFFFF"
+                     alt="Subaru">
+                <p>SUBARU</p>
+            </div>
+
+            <div class="logo-marca">
+                <img src="https://cdn.simpleicons.org/renault/FFFFFF"
+                     alt="Renault">
+                <p>RENAULT</p>
+            </div>
+
+            <div class="logo-marca">
+                <img src="imagenes/changan.jpg"
+                     alt="Changan">
+                <p>CHANGAN</p>
+            </div>
+
+            <div class="logo-marca">
+                <img src="imagenes/jac.jpg"
+                     alt="JAC Motors">
+                <p>JAC</p>
+            </div>
+
+        </div>
+
+        <a href="https://www.imcruz.com/" target="_blank">
+            Visitar sitio oficial de Imcruz ↗
+        </a>
+
+    </div>
+</section>
+        <!-- PROMOCIÓN Y CONTADOR -->
+        <section class="promocion contenedor" id="promocion">
+
+            <div>
+                <p class="etiqueta rojo">OPORTUNIDAD ESPECIAL</p>
+                <h2>Tu próximo auto<br>está más cerca.</h2>
+                <p>
+                    Consulta las promociones y alternativas de financiamiento
+                    directamente con un asesor.
+                </p>
+                <a href="#contacto" class="btn-rojo">Quiero información →</a>
+            </div>
+
+            <div class="contador-caja">
+                <small>CONTADOR DEMOSTRATIVO</small>
+                <h3>Tiempo de promoción</h3>
+                <p>Cuenta regresiva de ejemplo.</p>
+
+                <div class="reloj">
+                    <div><strong id="dias">00</strong><span>DÍAS</span></div>
+                    <div><strong id="horas">00</strong><span>HORAS</span></div>
+                    <div><strong id="minutos">00</strong><span>MIN</span></div>
+                    <div><strong id="segundos">00</strong><span>SEG</span></div>
+                </div>
+
+                <p class="nota">
+                    No representa una promoción oficial de Imcruz.
+                </p>
+            </div>
+
+        </section>
+
+        <!-- CONTACTO -->
+        <section class="contacto" id="contacto">
+            <div class="contenedor contacto-grid">
+
+                <div>
+                    <p class="etiqueta">CONTÁCTANOS</p>
+                    <h2>¿Listo para elegir<br><span>tu camino?</span></h2>
+                    <p>Déjanos tus datos y el vehículo que te interesa.</p>
+                    <p class="datos-contacto">
+                        Consulta los canales oficiales en
+                        <a href="https://www.imcruz.com/" target="_blank">Imcruz</a>.
+                    </p>
+                </div>
+
+                <form id="formulario">
+
+                    <label>Nombre completo</label>
+                    <input type="text" id="nombre" placeholder="Escribe tu nombre">
+
+                    <label>Correo electrónico</label>
+                    <input type="email" id="correo" placeholder="tunombre@correo.com">
+
+                    <label>Vehículo de interés</label>
+                    <select id="modelo">
+                        <option value="">Selecciona un modelo</option>
+                        <option>Alto</option>
+                        <option>Jimny</option>
+                        <option>Grand Vitara</option>
+                        <option>Mazda CX-5</option>
+                        <option>Renault Kardian</option>
+                        <option>JAC T8 Pro</option>
+                    </select>
+
+                    <label>Tu consulta</label>
+                    <textarea id="consulta" rows="3"
+                        placeholder="Escribe tu consulta"></textarea>
+
+                    <button type="submit" class="btn-rojo">
+                        Enviar consulta →
+                    </button>
+
+                    <p id="mensaje"></p>
+                </form>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+        <div class="contenedor pie">
+            <b>IMCRUZ | PROYECTO ACADÉMICO</b>
+            <span>Sitio demostrativo no oficial.</span>
+            <a href="#inicio">Volver arriba ↑</a>
+        </div>
+    </footer>
+
+    <!-- VENTANA DE DETALLES -->
+    <div class="modal" id="modal">
+        <div class="modal-contenido">
+            <button id="cerrarModal" class="cerrar">×</button>
+            <p class="etiqueta rojo">DETALLES DEL VEHÍCULO</p>
+            <h2 id="tituloModal"></h2>
+            <p id="textoModal"></p>
+            <p>Consulta con Imcruz las versiones, precios y disponibilidad.</p>
+            <a href="#contacto" class="btn-rojo" id="contactarModal">
+                Solicitar información →
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>
